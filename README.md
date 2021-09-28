@@ -7,9 +7,9 @@ Instead of wasting a large amount of time searching for simple solutions for eve
 ##### Table of content
 
 1.	Objects
-	1.1	CREATE OBJECT
-	1.2	COPY, CLONE OBJECT
-	1.3	CREATE/ACCESS OBJECT PROPERTIES
+	1.	CREATE OBJECT
+	1. 	COPY, CLONE OBJECT
+	1.	CREATE/ACCESS OBJECT PROPERTIES
 
 
 ## 1. ES6 Objects
