@@ -50,7 +50,7 @@ const objWithOjectPrototype = Object.create( Object.prototype )
 ```	
 > -----------------------------------------------------
 
-> ** A NOTE TO REMEMBER **
+> :purple_circle: A NOTE TO REMEMBER :purple_circle:
 
 > Object literal notation and Object.create(Object.prototype) are equivalent
 
@@ -89,7 +89,7 @@ const objWithKeyValuePairs = Object.fromEntries(keyValuePairs)
 
 > -----------------------------------------------------
 
-> ** A NOTE TO REMEMBER **
+> :purple_circle: A NOTE TO REMEMBER :purple_circle:
 
 > Object.entries() is useful when converting from a map to an object
 
@@ -160,7 +160,7 @@ Object.defineProperties( User, {
 
 > -----------------------------------------------------
 
-> ** A NOTE TO REMEMBER **
+> :purple_circle: A NOTE TO REMEMBER :purple_circle:
 
 > Property descriptor allow us to write readonly, enumerable and configurable properties
 
