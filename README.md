@@ -6,10 +6,10 @@ Instead of wasting a large amount of time searching for simple solutions for eve
 
 ##### Table of content
 
-1.	[ES6 OBJECTS](#es6-objects)
-	1.	[Create object](#create-object)
-	1. 	[Copy, clone object](#copy-clone-object)
-	1.	[Create/Access object properties](#createAccess-object-properties)
+1.	[ES6 OBJECTS](#1-es6-objects)
+	1.	[Create object](#11create-object)
+	1. 	[Copy, clone object](#12-copy-clone-object)
+	1.	[Create/Access object properties](#13-createAccess-object-properties)
 
 
 ## 1. ES6 OBJECTS
