@@ -50,6 +50,7 @@ const objWithOjectPrototype = Object.create( Object.prototype )
 ```	
 
 > ** A NOTE TO REMEMBER **
+
 > Object literal notation and Object.create(Object.prototype) are equivalent
 
 - with prototype
@@ -84,6 +85,7 @@ const objWithKeyValuePairs = Object.fromEntries(keyValuePairs)
 ```
 
 > ** A NOTE TO REMEMBER **
+
 > Object.entries() is useful when converting from a map to an object
 
 - with mutation on target object
@@ -150,9 +152,10 @@ Object.defineProperties( User, {
 ```
 
 > ** A NOTE TO REMEMBER **
+
 > Property descriptor allow us to write readonly, enumerable and configurable properties
 
--access - all (enumerable) keys
+- access - all (enumerable) keys
 ```javascript
 const allObjectKeys = Object.keys(User)
 ```
