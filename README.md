@@ -4,11 +4,9 @@ Instead of wasting a large amount of time searching for simple solutions for eve
 
 #### This Cheatsheet is ever growing! So, go ahead and pick your solutions.
 
-## ES6 Objects
+## 1 ) ES6 Objects
 
 ``` javascript
-
-
 
 	// ------------------------------------------------
 	// TEST / REFERENCE OBJECT
@@ -23,6 +21,11 @@ Instead of wasting a large amount of time searching for simple solutions for eve
 			country: null
 		}
 	}
+
+```
+## 1.1 ) ES6 Objects
+
+``` javascript
 
 	// ------------------------------------------------
 	// CREATE / COPY / CLONE OBJECT/S
@@ -124,7 +127,3 @@ Instead of wasting a large amount of time searching for simple solutions for eve
 
 	// access - all (enumerable) values
 	const allObjectValues = Object.values(User)
-
-
-
-```
