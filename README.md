@@ -6,39 +6,38 @@ Instead of wasting a large amount of time searching for simple solutions for eve
 
 ## 1 ) ES6 Objects
 
-``` javascript
+TEST / REFERENCE OBJECT
 
-	// ------------------------------------------------
-	// TEST / REFERENCE OBJECT
-	// ------------------------------------------------
+```javascript
 
-	const User = {	
-		id: null,
-		name: null,
-		address: {
-			street: null,
-			state: null,
-			country: null
-		}
+const User = {	
+	id: null,
+	name: null,
+	address: {
+		street: null,
+		state: null,
+		country: null
 	}
+}
 
 ```
-## 1.1 ) ES6 Objects
 
-``` javascript
+#### 1.1 ) CREATE / COPY / CLONE OBJECT/S
 
-	// ------------------------------------------------
-	// CREATE / COPY / CLONE OBJECT/S
-	// ------------------------------------------------
+```javascript
 
-	// create - with Object constructor
-	const objWithConstructor = new Object()
+// create - with Object constructor
+const objWithConstructor = new Object()
 
-	// create - without 'new' keyword
-	const objWithoutNewKeyword = Object()
+// create - without 'new' keyword
+const objWithoutNewKeyword = Object()
 
-	// create - with object literal/initializer notation
-	const objLiteral = { /* key : value */ }
+// create - with object literal/initializer notation
+const objLiteral = { /* key : value */ }
+
+```
+
+```javascript
 
 	// create - with Object.prototype as prototype
 	const objWithOjectPrototype = Object.create( Object.prototype )	
