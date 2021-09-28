@@ -1,14 +1,19 @@
 # ES6 Cheatsheet
 
-Instead of wasting a large amount of time searching for simple solutions for everyday ES6 problems, this quirky ES6 cheatsheet enables you to find solutions faster. Just choose a way based on your requirements.
+Instead of wasting a large amount of time searching for simple solutions for everyday ES6 problems, this quirky ES6 cheatsheet enables you to find solutions faster. Just choose what fits your requirements.
 
 #### This Cheatsheet is ever growing! So, go ahead and pick your solutions.
 
-## 1 ) ES6 Objects
+## 1. ES6 Objects
 
 TEST / REFERENCE OBJECT
 
 ```javascript
+
+'use strict'
+
+// Following object 'User' is used as  
+// reference/prototype for snippet examples
 
 const User = {	
 	id: null,
@@ -22,107 +27,137 @@ const User = {
 
 ```
 
-#### 1.1 ) CREATE / COPY / CLONE OBJECT/S
+#### 1.1 CREATE OBJECT
 
+- with Object constructor
 ```javascript
-
-// create - with Object constructor
 const objWithConstructor = new Object()
-
-// create - without 'new' keyword
-const objWithoutNewKeyword = Object()
-
-// create - with object literal/initializer notation
-const objLiteral = { /* key : value */ }
-
 ```
 
+- without 'new' keyword 
 ```javascript
+const objWithoutNewKeyword = Object()
+```
 
-	// create - with Object.prototype as prototype
-	const objWithOjectPrototype = Object.create( Object.prototype )	
+- with object literal/initializer notation
+```javascript
+const objLiteral = { /* key : value */ }
+```
 
-	// ** Note ** 
-	// -- object literal notation and Object.create(Object.prototype) are equivalent
+- with Object.prototype as prototype
+```javascript
+const objWithOjectPrototype = Object.create( Object.prototype )
+```	
 
-	// create - with prototype
-	const objWithUserAsPrototype = Object.create( User ) 
+> ** A NOTE TO REMEMBER **
+> Object literal notation and Object.create(Object.prototype) are equivalent
 
-	// create - without prototype
-	const objWithNoPrototype = Object.create( null ) 
+- with prototype
+```javascript
+const objWithUserAsPrototype = Object.create( User ) 
+```
 
-	// create - with properyObject argument
-	const objWithProperyObjectArgument = Object.create( {}, {
-		foo: {
-			value: 'foo value',
-			writable: true,
-			configurable: true,
-			enumerable: true
-		}
-	})
+- without prototype
+```javascript
+const objWithNoPrototype = Object.create( null ) 
+```	
 
-	// create - with key-value pairs
-	const keyValuePairs = [
-		['key01', 'val01'],
-		['key02', 'val02']
-	]
-	const objWithKeyValuePairs = Object.fromEntries(keyValuePairs)
+- with properyObject argument
+```javascript
+const objWithProperyObjectArgument = Object.create( {}, {
+	foo: {
+		value: 'foo value',
+		writable: true,
+		configurable: true,
+		enumerable: true
+	}
+})
+```
 
-	// =============================================
-	// ** A NOTE TO REMEMBER **
-	// =============================================
-	// - Object.entries() is useful when converting from a map to an object
-	
-	// copy - with mutation on target object
-	const mutatedUser = Object.assign( User, {newProp: 'newProp value'} )
+- with key-value pairs
+```javascript
+const keyValuePairs = [
+	['key01', 'val01'],
+	['key02', 'val02']
+]
+const objWithKeyValuePairs = Object.fromEntries(keyValuePairs)
+```
 
-	// copy - as a shallow clone 
-	const userShallowClone = Object.assign( {}, User )
+> ** A NOTE TO REMEMBER **
+> Object.entries() is useful when converting from a map to an object
 
-	// copy - with spread operator as a shallow clone with object literal notation
-	const userShallowCloneWithSpreadSyntax = { ...User }
+- with mutation on target object
+```javascript
+const mutatedUser = Object.assign( User, {newProp: 'newProp value'} )
+```
 
-	// copy - deep clone
-	const userDeepClone = JSON.parse( JSON.stringify(User) )
+#### 1.2 COPY, CLONE OBJECT
 
-	// ------------------------------------------------
-	// CREATE / ACCESS OBJECT PROPERTIES
-	// ------------------------------------------------	
+- create a shallow clone 
+```javascript
+const userShallowClone = Object.assign( {}, User )
+```
 
-	// access - with dot notation
-	let objPropWithDotNotation = User.id
+- create a shallow clone with object literal notation and spread operator
+```javascript
+const userShallowCloneWithSpreadSyntax = { ...User }
+```
 
-	// access - with bracket notation
-	let objPropWithBracketNotation = User['id']
+- create a deep clone
+```javascript
+const userDeepClone = JSON.parse( JSON.stringify(User) )
+```
 
-	// set - with dot notation
-	User.newPropWithDotNotation = 'New property with dot notation'
+#### 1.3 CREATE/ACCESS OBJECT PROPERTIES
 
-	// set - with bracket notation
-	User['prop with spaces'] = 'New property with bracket notation and spaces in the key'
+- access - with dot notation
+```javascript
+let objPropWithDotNotation = User.id
+```
 
-	// set - with property descriptor (single property)
-	Object.defineProperty( User, 'propWithDescriptor01', {
-		value: 'Read only prop set with property descriptor',
-		writable: false, // readonly
-		enumerable: true, // accessible in loops/iterations
-		configurable: false // can not delete
-	})
+- access - with bracket notation
+```javascript
+let objPropWithBracketNotation = User['id']
+```
 
-	// set - with property descriptor (multiple property)
-	Object.defineProperties( User, {
-		'propWithDescriptor02': { value: 'Prop with descriptor 02', writable: true }, // descriptor object
-		'propWithDescriptor03': { value: 'Prop with descriptor 03', writable: false }, // descriptor object
-		// more props...
-	})
+- create - with dot notation
+```javascript
+User.newPropWithDotNotation = 'New property with dot notation'
+```
 
-	// =============================================
-	// ** A NOTE TO REMEMBER **
-	// ============================================= 
-	// - Property descriptor allow us to write readonly, enumerable and configurable properties
+- create - with bracket notation
+```javascript
+User['prop with spaces'] = 'New property with bracket notation and spaces in the key'
+```
 
-	// access - all (enumerable) keys
-	const allObjectKeys = Object.keys(User)
+- create - with property descriptor (single property)
+```javascript
+Object.defineProperty( User, 'propWithDescriptor01', {
+	value: 'Read only prop set with property descriptor',
+	writable: false, // readonly
+	enumerable: true, // accessible in loops/iterations
+	configurable: false // can not delete
+})
+```
 
-	// access - all (enumerable) values
-	const allObjectValues = Object.values(User)
+- create - with property descriptor (multiple property)
+```javascript
+Object.defineProperties( User, {
+	'propWithDescriptor02': { value: 'Prop with descriptor 02', writable: true }, // descriptor object
+	'propWithDescriptor03': { value: 'Prop with descriptor 03', writable: false }, // descriptor object
+	// more props...
+})
+```
+
+> ** A NOTE TO REMEMBER **
+> Property descriptor allow us to write readonly, enumerable and configurable properties
+
+-access - all (enumerable) keys
+```javascript
+const allObjectKeys = Object.keys(User)
+```
+
+- access - all (enumerable) values
+```javascript
+const allObjectValues = Object.values(User)
+```
