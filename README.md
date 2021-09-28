@@ -6,10 +6,10 @@ Instead of wasting a large amount of time searching for simple solutions for eve
 
 ##### Table of content
 
-1.	[ES6 Objects](##es6-objects)
-	1.	[CREATE OBJECT](####CREATE-OBJECT)
-	1. 	[COPY, CLONE OBJECT](####COPY-CLONE-OBJECT)
-	1.	[CREATE/ACCESS OBJECT PROPERTIES](####CREATE/ACCESS-OBJECT-PROPERTIES)
+1.	[ES6 Objects](#es6-objects)
+	1.	[Create object](#Create-object)
+	1. 	[Copy, clone object](#Copy-clone-object)
+	1.	[Create/Access object properties](#Create/Access-object-properties)
 
 
 ## 1. ES6 Objects
@@ -35,7 +35,7 @@ const User = {
 
 ```
 
-#### 1.1 CREATE OBJECT
+#### 1.1 Create object
 
 - with Object constructor
 ```javascript
@@ -108,7 +108,7 @@ const objWithKeyValuePairs = Object.fromEntries(keyValuePairs)
 const mutatedUser = Object.assign( User, {newProp: 'newProp value'} )
 ```
 
-#### 1.2 COPY, CLONE OBJECT
+#### 1.2 Copy, clone object
 
 - create a shallow clone 
 ```javascript
@@ -125,7 +125,7 @@ const userShallowCloneWithSpreadSyntax = { ...User }
 const userDeepClone = JSON.parse( JSON.stringify(User) )
 ```
 
-#### 1.3 CREATE/ACCESS OBJECT PROPERTIES
+#### 1.3 Create/Access object properties
 
 - access - with dot notation
 ```javascript
