@@ -8,8 +8,10 @@ Instead of wasting a large amount of time searching for simple solutions for eve
 
 ``` javascript
 
+
+
 	// ------------------------------------------------
-	// Following is a test object used as prototype or for references
+	// TEST / REFERENCE OBJECT
 	// ------------------------------------------------
 
 	const User = {	
@@ -23,7 +25,7 @@ Instead of wasting a large amount of time searching for simple solutions for eve
 	}
 
 	// ------------------------------------------------
-	// Create / Copy / Clone object/s 
+	// CREATE / COPY / CLONE OBJECT/S
 	// ------------------------------------------------
 
 	// create - with Object constructor
@@ -64,9 +66,11 @@ Instead of wasting a large amount of time searching for simple solutions for eve
 	]
 	const objWithKeyValuePairs = Object.fromEntries(keyValuePairs)
 
-	// ** Note ** 
-	// -- Object.entries() is useful when converting from a map to an object
-
+	// =============================================
+	// ** A NOTE TO REMEMBER **
+	// =============================================
+	// - Object.entries() is useful when converting from a map to an object
+	
 	// copy - with mutation on target object
 	const mutatedUser = Object.assign( User, {newProp: 'newProp value'} )
 
@@ -80,7 +84,7 @@ Instead of wasting a large amount of time searching for simple solutions for eve
 	const userDeepClone = JSON.parse( JSON.stringify(User) )
 
 	// ------------------------------------------------
-	// Objects Properties : Create, Access
+	// CREATE / ACCESS OBJECT PROPERTIES
 	// ------------------------------------------------	
 
 	// access - with dot notation
@@ -110,13 +114,17 @@ Instead of wasting a large amount of time searching for simple solutions for eve
 		// more props...
 	})
 
-	// ** Note ** 
-	// -- property descriptor allow to write readonly, enumerable and configurable properties
+	// =============================================
+	// ** A NOTE TO REMEMBER **
+	// ============================================= 
+	// - Property descriptor allow us to write readonly, enumerable and configurable properties
 
 	// access - all (enumerable) keys
 	const allObjectKeys = Object.keys(User)
 
 	// access - all (enumerable) values
 	const allObjectValues = Object.values(User)
+
+
 
 ```
