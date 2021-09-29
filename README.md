@@ -11,7 +11,8 @@ Instead of wasting a large amount of time searching for simple solutions for eve
 	1. 	[Copy, clone object](#12-copy-clone-object)
 	1.	[Create/Access object properties](#13-createAccess-object-properties)
 	1.  [Freeze, seal object ](#14-Freeze-seal-object )
-	1.  [Miscellaneous](#15-Miscellaneous)
+	1.  [Delete object properties](#15-Delete-object-properties)
+	1.  [Miscellaneous](#16-Miscellaneous)
 
 
 ## 1. ES6 OBJECTS
@@ -234,7 +235,7 @@ delete User.id
 > -----------------------------------------------------
 
 
-#### 1.5 Miscellaneous
+#### 1.6 Miscellaneous
 
 - check if the object has the specified property as its own property and not inherited
 ```javascript
@@ -248,7 +249,7 @@ console.log( User.hasOwnProperty('toString') )
 
 > :small_blue_diamond: A NOTE TO REMEMBER :small_blue_diamond:
 
-> Arrays ar objects, so 'hasOwnProperty' method can be used in arrays!
+> Arrays are objects, so 'hasOwnProperty' method can be used in arrays!
 
 > Example, let msgArr = [ "hello", "world" ]; msgArr.hasOwnProperty(1); Expected output : true
 
