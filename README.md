@@ -194,19 +194,19 @@ const allKeyValuesOfObject = Object.entries( User )
 #### 1.4 Freeze, seal object 
 
 - freeze an object
-- no new properties can be added
-- no properties can be deleted
-- no property value can be changed
-- property descriptors can not be changed
+	- no new properties can be added
+	- no properties can be deleted
+	- no property value can be changed
+	- property descriptors can not be changed
 ```javascript
 const objToFreeze = { prop: 21 }
 Object.freeze( objToFreeze )
 ```
 
 - seal an object
-- can not add new properties
-- can not delete existing properties
-- though, values of the existing writable properties can be changed
+	- can not add new properties
+	- can not delete existing properties
+	- though, values of the existing writable properties can be changed
 ```javascript
 const objToSeal = { prop: 21 }
 Object.seal( objToSeal )
