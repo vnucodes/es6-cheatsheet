@@ -10,6 +10,8 @@ Instead of wasting a large amount of time searching for simple solutions for eve
 	1.	[Create object](#11-create-object)
 	1. 	[Copy, clone object](#12-copy-clone-object)
 	1.	[Create/Access object properties](#13-createAccess-object-properties)
+	1.  [Freeze, seal object ](#14-Freeze-seal-object )
+	1.  [Miscellaneous](#15-Miscellaneous)
 
 
 ## 1. ES6 OBJECTS
@@ -54,7 +56,7 @@ const objLiteral = { /* key : value */ }
 
 - with Object.prototype as prototype
 ```javascript
-const objWithOjectPrototype = Object.create( Object.prototype )
+const objWithObjectPrototype = Object.create( Object.prototype )
 ```	
 > -----------------------------------------------------
 
@@ -182,4 +184,82 @@ const allObjectKeys = Object.keys(User)
 - access - all (enumerable) values
 ```javascript
 const allObjectValues = Object.values(User)
+```
+
+- access - all (enumerable) key-values pairs [key, value] as array collection
+```javascript
+const allKeyValuesOfObject = Object.entries( User )
+```
+
+#### 1.4 Freeze, seal object 
+
+- freeze an object
+- no new properties can be added
+- no properties can be deleted
+- no property value can be changed
+- property descriptors can not be changed
+```javascript
+const objToFreeze = { prop: 21 }
+Object.freeze( objToFreeze )
+```
+
+- seal an object
+- can not add new properties
+- can not delete existing properties
+- though, values of the existing writable properties can be changed
+```javascript
+const objToSeal = { prop: 21 }
+Object.seal( objToSeal )
+
+// following won't delete the property
+delete objToSeal.prop
+
+// following code chnages the value of the prop
+objToSeal.prop = 13
+```
+
+#### 1.5 Delete object properties
+
+- delete configurable properties
+```javascript
+delete User.id
+```
+
+> -----------------------------------------------------
+
+> :small_blue_diamond: A NOTE TO REMEMBER :small_blue_diamond:
+
+> 'delete obj.prop', returns true, if the property is configurable, else returns false.
+
+> -----------------------------------------------------
+
+
+#### 1.5 Miscellaneous
+
+- check if the object has the specified property as its own property and not inherited
+```javascript
+console.log( User.hasOwnProperty('name') )
+// expected output : true
+console.log( User.hasOwnProperty('toString') )
+// expected output : false, becuase it's inherited
+```
+
+> -----------------------------------------------------
+
+> :small_blue_diamond: A NOTE TO REMEMBER :small_blue_diamond:
+
+> Arrays ar objects, so 'hasOwnProperty' method can be used in arrays!
+
+> Example, let msgArr = [ "hello", "world" ]; msgArr.hasOwnProperty(1); Expected output : true
+
+> -----------------------------------------------------
+
+- check if the object is frozen
+```javascript
+Object.isFrozen( objToFreeze ) // true
+```
+
+- check if the object is sealed
+```javascript
+Object.isSealed( objToSeal ) // true
 ```
