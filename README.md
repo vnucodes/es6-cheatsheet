@@ -10,10 +10,12 @@ Instead of wasting a large amount of time searching for simple solutions for eve
 	1.	[Create object](#11-create-object)
 	1. 	[Copy, clone object](#12-copy-clone-object)
 	1.	[Create/Access object properties](#13-createAccess-object-properties)
-	1.  [Freeze, seal object ](#14-Freeze-seal-object )
-	1.  [Delete object properties](#15-Delete-object-properties)
-	1.  [Miscellaneous](#16-Miscellaneous)
+	1.  [Freeze, seal object ](#14-freeze-seal-object )
+	1.  [Delete object properties](#15-delete-object-properties)
+	1.  [Miscellaneous](#16-miscellaneous)
 1.	[ARRAYS](#2-arrays)
+	1.	[Create array](#21-create-array)
+	1.  [Miscellaneous](#miscellaneous)
 
 
 ## 1. OBJECTS
@@ -268,3 +270,18 @@ arrWithNonZeroLength.length = arrLength
 > **NOTE** : `let arr = [21]` and `new Array(21)` are not the same! 
 > The first one creates an array with an item that has value of 21, 
 > where second one creates an array of length 21 with empty slots.
+
+#### Miscellaneous
+
+- Truncating array with `length` property
+```javascript
+let cats = [ "Arriety", "Ponyo", "chihiro" ]
+
+cats.length = 2
+console.log(cats)
+// ["Arriety", "Ponyo"]
+
+cats.length = 0
+console.log(cats)
+// []
+```
