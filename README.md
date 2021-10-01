@@ -275,7 +275,7 @@ arrWithNonZeroLength.length = arrLength
 
 - Truncating array with `length` property
 ```javascript
-let cats = [ "Arriety", "Ponyo", "chihiro" ]
+let cats = [ "Arriety", "Ponyo", "Chihiro" ]
 
 cats.length = 2
 console.log(cats)
