@@ -6,7 +6,7 @@ Instead of wasting a large amount of time searching for simple solutions for eve
 
 ##### Table of content
 
-1.	[ES6 OBJECTS](#1-es6-objects)
+1.	[OBJECTS](#1-objects)
 	1.	[Create object](#11-create-object)
 	1. 	[Copy, clone object](#12-copy-clone-object)
 	1.	[Create/Access object properties](#13-createAccess-object-properties)
@@ -14,8 +14,10 @@ Instead of wasting a large amount of time searching for simple solutions for eve
 	1.  [Delete object properties](#15-Delete-object-properties)
 	1.  [Miscellaneous](#16-Miscellaneous)
 
+2. [ARRAYS][#2-arrays]
 
-## 1. ES6 OBJECTS
+
+## 1. OBJECTS
 
 TEST / REFERENCE OBJECT
 
@@ -264,3 +266,36 @@ Object.isFrozen( objToFreeze ) // true
 ```javascript
 Object.isSealed( objToSeal ) // true
 ```
+
+## 2. ARRAYS
+
+In JavaScript, arrays are high-level, (ordered) list like objects. All arrays inherit from global `Array` object.
+
+#### 2.1 Create array
+
+- with Array constructor
+```javascript
+const arrWithContructor = new Array(1, 2)
+// or
+const arrWithContructor = Array(1, 2)
+```
+
+- with bracket notation / array literal
+```javascript
+const arrWithBracketNotation = [1, 2]
+```
+
+- with non-zero length and without any items
+```javascript
+let arrLength = 2
+const arrWithNonZeroLength = new Array(arrLength)
+// or
+const arrWithNonZeroLength = Array(arrLength)
+// or
+const arrWithNonZeroLength = []
+arrWithNonZeroLength.length = arrLength
+```
+
+> **NOTE** : let arr = [21] and new Array(21) are not the same! 
+> The first one creates an array with an item that has value of 21, 
+> where second one creates an array of length 21 with empty slots.
