@@ -60,13 +60,8 @@ const objLiteral = { /* key : value */ }
 ```javascript
 const objWithObjectPrototype = Object.create( Object.prototype )
 ```	
-> -----------------------------------------------------
 
-> :small_blue_diamond: A NOTE TO REMEMBER :small_blue_diamond:
-
-> Object literal notation and Object.create(Object.prototype) are equivalent
-
-> -----------------------------------------------------
+> **NOTE** : Object literal notation and `Object.create(Object.prototype)` are equivalent.
 
 - with prototype
 ```javascript
@@ -99,13 +94,7 @@ const keyValuePairs = [
 const objWithKeyValuePairs = Object.fromEntries(keyValuePairs)
 ```
 
-> -----------------------------------------------------
-
-> :small_blue_diamond: A NOTE TO REMEMBER :small_blue_diamond:
-
-> Object.entries() is useful when converting from a map to an object
-
-> -----------------------------------------------------
+> **NOTE** : `Object.entries()` is useful when converting from a map to an object.
 
 - with mutation on target object
 ```javascript
@@ -170,13 +159,7 @@ Object.defineProperties( User, {
 })
 ```
 
-> -----------------------------------------------------
-
-> :small_blue_diamond: A NOTE TO REMEMBER :small_blue_diamond:
-
-> Property descriptor allow us to write readonly, enumerable and configurable properties
-
-> -----------------------------------------------------
+> **NOTE** : Property descriptor allow us to write readonly, enumerable and configurable properties.
 
 - access - all (enumerable) keys
 ```javascript
@@ -227,13 +210,7 @@ objToSeal.prop = 13
 delete User.id
 ```
 
-> -----------------------------------------------------
-
-> :small_blue_diamond: A NOTE TO REMEMBER :small_blue_diamond:
-
-> 'delete obj.prop', returns true, if the property is configurable, else returns false.
-
-> -----------------------------------------------------
+> **NOTE** : `delete obj.prop`, returns true, if the property is configurable, else returns false.
 
 
 #### 1.6 Miscellaneous
@@ -246,15 +223,8 @@ console.log( User.hasOwnProperty('toString') )
 // expected output : false, becuase it's inherited
 ```
 
-> -----------------------------------------------------
-
-> :small_blue_diamond: A NOTE TO REMEMBER :small_blue_diamond:
-
-> Arrays are objects, so 'hasOwnProperty' method can be used in arrays!
-
-> Example, let msgArr = [ "hello", "world" ]; msgArr.hasOwnProperty(1); Expected output : true
-
-> -----------------------------------------------------
+> **NOTE** : Arrays are objects, so `hasOwnProperty` method can be used in arrays!
+> Example, `let msgArr = [ "hello", "world" ]; msgArr.hasOwnProperty(1);` Expected output : true
 
 - check if the object is frozen
 ```javascript
@@ -295,6 +265,6 @@ const arrWithNonZeroLength = []
 arrWithNonZeroLength.length = arrLength
 ```
 
-> **NOTE** : let arr = [21] and new Array(21) are not the same! 
+> **NOTE** : `let arr = [21]` and `new Array(21)` are not the same! 
 > The first one creates an array with an item that has value of 21, 
 > where second one creates an array of length 21 with empty slots.
