@@ -13,7 +13,7 @@ Instead of wasting a large amount of time searching for simple solutions for eve
 	1.  [Freeze, seal object ](#14-Freeze-seal-object )
 	1.  [Delete object properties](#15-Delete-object-properties)
 	1.  [Miscellaneous](#16-Miscellaneous)
-1. [ARRAYS][#2-arrays]
+1.	[ARRAYS][#2-arrays]
 
 
 ## 1. OBJECTS
