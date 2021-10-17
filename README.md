@@ -74,9 +74,9 @@ const objWithUserAsPrototype = Object.create( User )
 const objWithNoPrototype = Object.create( null ) 
 ```	
 
-- with properyObject argument
+- with propertyObject argument
 ```javascript
-const objWithProperyObjectArgument = Object.create( {}, {
+const objWithPropertyObjectArgument = Object.create( {}, {
 	foo: {
 		value: 'foo value',
 		writable: true,
